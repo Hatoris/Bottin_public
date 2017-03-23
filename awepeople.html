@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find member of AFAM">
+    <meta name="author" content="Florian Bernard-Patrzynski">
+    <title>Admin - We people of AFAM !</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="css\jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="css\jquery-ui.theme.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <div class="jumbotron" id="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <h2 class="text-center"> Bonjour, Mouna ici tu peux ajouter des membres a l'AFAM !</h2>
+                    <p class="text-center"> Voici le bottin des membres de l'AFAM</p>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <img class="img-responsive center-block" id="logo" src="img\afamlogo.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" padding-top-10>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong> Ajouter un membre a l'AFAM </strong>
+            </div>
+            <div class="panel-body">
+                <form class="addpeople">
+                    <div class="form-group">
+                        <label for="name">Nom, prenom:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom, prenom">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date de naissance:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control date" defaultvalue=" " data-provide="datepicker" name="dob" id="dob" placeholder="aaaa-mm-jj">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sim">Numero SIM:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></span>
+                            <input type="text" class="form-control" name="sim" id="sim" placeholder="SIM">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Courriel:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="xxxxx@umontreal.ca">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="office">Bureau N°:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-briefcase" aria-hidden="true"></i></span>
+                            <input type="office" class="form-control" defaultvalue=" " name="office" id="office" placeholder="4179">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneext">Extension téléphone N°:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <input type="phoneext" class="form-control" defaultvalue=" " name="phoneext" id="phoneext" placeholder="0407">
+                        </div>
+                    </div>
+                    <h4><label for="name">Occupation</label></h4>
+                    <div class="input_fields_wrap_occupation">
+                        <button class="btn btn-info add_field_button_occupation">Ajouter une occupation</button>
+                        <div class="form-group" style="padding-top : 10px">
+                            <table class="table table-hover" id="occupations">
+                                <tr classe="1" id="a1">
+                                    <td><label for="oname">Nom de l'occupation:</label><br><input type="text" class="form-control" defaultvalue=" " id="oname" name="oname[1]"> </td>
+                                    <td><label for="oproject">Nom du projet:</label><br><input type="text" class="form-control" defaultvalue=" " id="oproject" name="oproject[1]"></td>
+                                    <td id="aa1"><label for="osuper">Nom du superviseur:</label>
+                                        <a href="#" class="glyphicon glyphicon-plus-sign add_osup" id="1" style="align: center"></a>
+                                        <br><input type="text" class="form-control clearable" defaultvalue=" " id="osuper" name="osuper[1]"></td>
+                                    <td><label for="ostart">Date de debut:</label><br><input type="text" class="form-control" defaultvalue=" " id="ostart" name="ostart[1]"></td>
+                                    <td><label for="oend">Date de fin:</label><br><input type="text" class="form-control" defaultvalue=" " id="oend" name="oend[1]"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <h4><label for="name">Groupe</label></h4>
+                    <div class="input_fields_wrap_groupe">
+                        <button class="btn btn-info add_field_button_groupe">Ajouter un groupe</button>
+                        <div class="form-group" style="padding-top : 10px">
+                            <table class="table table-hover" id="groupes">
+                                <tr id="b1">
+                                    <td><label for="gname">Nom du groupe:</label><br><input type="text" class="form-control gname" defaultvalue=" " id="gname" name="gname[1]"> </td>
+                                    <td><label for="gstart">Date de debut:</label><br><input type="text" class="form-control" defaultvalue=" " id="gstart" name="gstart[1]"></td>
+                                    <td><label for="gend">Date de fin:</label><br><input type="text" class="form-control" defaultvalue=" " id="gend" name="gend[1]"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit" value="send" style="margin-top : 10px" class="btn btn-success submit"><span class="glyphicon glyphicon-floppy-save"></span> Enregister</button>
+                    </div>
+                    <span id="results"> <br>
+            </span>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="container" padding-top-10>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong>Modifier des informations sur un membre de l'AFAM</strong>
+            </div>
+            <div class="panel-body">
+                <form id="modify">
+                    <div class="form-group">
+                        <label for="name">Entrer vos mots clefs :</label>
+                        <input type="text" class="form-control" name="modifyname" id="modifyname" placeholder="Nom, SIM ou courriel">
+                        <button type="submit" id="submit1" value="send" style="margin-top : 10px" class="btn btn-info submit"><span class="glyphicon glyphicon-search"></span> Chercher</button>
+                    </div>
+                </form>
+                <span id="results1">
+        </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/adminPage.js"></script>
+</body>
+
+</html>

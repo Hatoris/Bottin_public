@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find member of AFAM">
+    <meta name="author" content="Florian Bernard-Patrzynski">
+    <title>We people of AFAM !</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="jumbotron" id="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <h2 class="text-center"> Bonjour, membres de l'AFAM !</h2>
+                    <p class="text-center"> Voici le bottin pour trouver nos membres</p>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <img class="img-responsive center-block" id="logo" src="img\afamlogo.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" padding-top-10>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong> Trouver des informations sur une personne de l'AFAM </strong>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Entrer vos mots clefs :</label>
+                        <input type="text" class="form-control" name="nameSearch" id="name" placeholder="Nom, SIM ou courriel">
+                        <button type="submit" id="submit" value="send" style="margin-top : 10px" class="btn btn-info submit"><span class="glyphicon glyphicon-search"></span> Chercher</button>
+                    </div>
+                </form>
+                <span id="results">
+
+          </span>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container" padding-top-10>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <strong>Trouver des informations sur un groupe</strong>
+            </div>
+            <div class="panel-body">
+                <form id="form2">
+                    <div class="form-group">
+                        <label for="groupe">Choissisez le groupe:</label>
+                        <select multiple class="form-control form-control" size="7" id="groupe">
+                        </select>
+                        <label style="margin-top : 10px" for="groupe1">Choissisez le format d'affichage:</label>
+                        <label class="radio-inline"><input type="radio" checked="checked" id="groupe0" name="optradio" value="table">Tableau</label>
+                        <label class="radio-inline"><input type="radio" id="groupe1" name="optradio" value="email">Courriel</label>
+                        <label class="radio-inline"><input type="radio" id="groupe2" name="optradio" value="emailMerge">Courriel fusionné</label><br>
+                        <button type="submit" name="test" id="submit1" value="submit" style="margin-top : 10px" class="btn btn-info submit"><span class="glyphicon glyphicon-search"></span> Chercher</button>
+                    </div>
+                </form>
+                <span id="results1">
+          </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/clipboard.min.js"></script>
+</body>
+
+</html>

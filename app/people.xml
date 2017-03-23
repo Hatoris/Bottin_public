@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="people.xsl"?>
+<!-- fichier valide en date du 2016-09-06T15h26 -->
+<people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="people.xsd">
+  <person>
+    <sim>udem-test</sim>
+    <name>Florian, Bernard</name>
+    <email>test@umontreal.ca</email>
+    <dob>1989-02-16</dob>
+    <occupation>
+      <name>Ph.d.</name>
+      <project>Bioproduction of BCRP</project>
+      <supervisor>Master</supervisor>
+      <supervisor>Anothermaster</supervisor>
+      <start>2015-09-01</start>
+    </occupation>
+    <group>
+      <name>afam</name>
+      <start>2015-09-01</start>
+    </group>
+    <group>
+      <name>labbiod</name>
+      <start>2015-09-01</start>
+    </group>
+  </person>
+</people>
