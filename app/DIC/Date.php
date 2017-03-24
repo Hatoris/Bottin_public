@@ -7,7 +7,7 @@ class Date {
     {
       setlocale (LC_TIME, 'fr_FR.utf8','fra');
       $newDate = strftime("%d %B", strtotime($originalDate));
-      return "Le " . $newDate;
+      return "Le " . utf8_decode($newDate);
 
     }
 
