@@ -1,7 +1,7 @@
 <?php
 
 
-require 'Autoloader.php';
+require __DIR__ . '/Autoloader.php';
 Bottin\Autoloader::register();
 
 /**
@@ -10,10 +10,10 @@ Bottin\Autoloader::register();
 * http://localhost/botin/Bottin/peopletest.xml
 **/
 $dic = new Bottin\DIC\DIContainer();
-$dic->setFactory('Bottin\xmlClass\SetXMLFile', function (){
-  return new Bottin\xmlClass\SetXMLFile("http://localhost/botin/app/people.xml");
+$dic->setFactory('Bottin\xmlClass\setXMLFile', function (){
+  return new Bottin\xmlClass\setXMLFile('http://afam-udem.ca:81/people.xml');
 });
-$XML = $dic->get('Bottin\xmlClass\SetXMLFile');
+$XML = $dic->get('Bottin\xmlClass\setXMLFile');
 $XMLFile = $XML->file();
 
 
@@ -26,14 +26,14 @@ $dic->setFactory('Bottin\DIC\Search', function() use ($XML){
   return new Bottin\DIC\Search($XML->read());
 });
 $search = $dic->get('Bottin\DIC\Search');
-$dic->setFactory('Bottin\viewClass\ViewPerson', function(){
-  return new Bottin\viewClass\ViewPerson();
+$dic->setFactory('Bottin\viewClass\viewPerson', function(){
+  return new Bottin\viewClass\viewPerson();
 });
-$ViewPerson = $dic->get('Bottin\viewClass\ViewPerson');
-$dic->setFactory('Bottin\viewClass\ViewGroup', function(){
-  return new Bottin\viewClass\ViewGroup();
+$ViewPerson = $dic->get('Bottin\viewClass\viewPerson');
+$dic->setFactory('Bottin\viewClass\viewGroup', function(){
+  return new Bottin\viewClass\viewGroup();
 });
-$ViewGroup = $dic->get('Bottin\viewClass\ViewGroup');
+$ViewGroup = $dic->get('Bottin\viewClass\viewGroup');
 
 
 
