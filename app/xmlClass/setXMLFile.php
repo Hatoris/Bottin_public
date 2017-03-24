@@ -19,7 +19,7 @@ class setXMLFile{
     curl_setopt($curl, CURLOPT_URL,"$xmlFile");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     $contenu = curl_exec($curl);
-    $xml = new \SimpleXMLElement($contenu);
+    $xml = simplexml_load_string($contenu,null,true);
     return $xml;
   }
 
