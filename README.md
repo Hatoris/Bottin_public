@@ -1,4 +1,4 @@
-# Botin
+# Bottin
 Application to create and manipulate a directory of professional people using only a xml document.
 This application is written to works on *unix servers
 
